@@ -9,7 +9,7 @@ const logger = pino();
 
 app.use(logger);
 app.use("/", router);
-
-app.listen(process.env.PORT, () => {
-    console.log(`server started on port ${process.env.PORT}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`server started on port ${PORT}`);
 });
